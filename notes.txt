@@ -1,2 +1,0 @@
-pip install sphinx
-install doxygen and add variable path
