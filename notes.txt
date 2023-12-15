@@ -1,5 +1,2 @@
 pip install sphinx
 install doxygen and add variable path
-
-mkdir docs
-cd docs
