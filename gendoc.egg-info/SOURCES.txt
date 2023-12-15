@@ -1,0 +1,7 @@
+README.md
+setup.py
+gendoc.egg-info/PKG-INFO
+gendoc.egg-info/SOURCES.txt
+gendoc.egg-info/dependency_links.txt
+gendoc.egg-info/requires.txt
+gendoc.egg-info/top_level.txt

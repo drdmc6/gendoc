@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 import os
 import argparse
-import doc_functions
+from doc_functions import doc_python, doc_cpp
 
-parser = argparse.ArgumentParser(description='Generate documentation.')
-parser.add_argument('--name', '-n', type=str, help='Code name')
+parser = argparse.ArgumentParser(prog='gendoc', description='Generate documentation.')
+parser.add_argument('name', type=str, help='Code name')
 parser.add_argument('--type', '-t', type=str, help='Code types')
 parser.add_argument('--input', '-i', type=str, help='Input file path')
 parser.add_argument('--output', '-o', type=str, help='Output file path')
@@ -23,8 +22,8 @@ if args.output: dir_output = args.output
 if not os.path.exists(dir_output):
     os.makedirs(dir_output)
     os.chdir(dir_output)
-    if 'python' in type_code: doc_functions.doc_python(name_project, dir_input)
+    if 'python' in type_code: doc_python(name_project, dir_input)
     print('')
-    if 'cpp' in type_code: doc_functions.doc_cpp(name_project, dir_input)
+    if 'cpp' in type_code: doc_cpp(name_project, dir_input)
     os.chdir('..')
 else: print('docs already exists')

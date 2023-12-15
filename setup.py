@@ -1,11 +1,14 @@
 from setuptools import find_packages, setup
-import os
 
 setup(
     name='gendoc',
-    version='0.1',
+    version='0.0.1',
     author="QuantifiedCarbon",
-    packages=find_packages(),
+    description="gendoc",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+    ],
+    packages=find_packages(where='src'),
     install_requires=[
         "sphinx",
         "sphinx_rtd_theme",
